@@ -6,9 +6,8 @@ html {
 *,
 *::after,
 *::before {
-  box-sizing: inherit;
+    box-sizing: inherit;
 }
-
 
 .container {
     max-width: 1200px;
@@ -86,14 +85,20 @@ body {
 
 .modern__img {
     max-width: 1000px;
+    width: 100%;
     height: 400px;
     margin: 0 auto 24px;
-    transition: linear 0.3s;
     border-radius: 5px;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
-.modern__img:hover {
+.modern__img img {
+    border-radius: 5px;
+    transition: linear 0.3s;
+}
+
+
+.modern__img img:hover {
     transform: scale(1.05);
     -webkit-box-shadow: 4px 5px 21px 6px #117EFF;
     box-shadow: 4px 5px 21px 6px #117EFF;
@@ -347,6 +352,10 @@ body {
     .header__link {
         font-size: 22px;
     }
+
+    .modern__img {
+        overflow: hidden;
+    }
 }
 
 /*--------max 992-------------*/
@@ -360,6 +369,10 @@ body {
         margin-right: 45px;
         max-width: 100px;
         text-align: center;
+    }
+
+    .modern__img {
+        height: 300px;
     }
 
 }
@@ -385,26 +398,28 @@ body {
 
 
     .site-nav__list {
+        padding: calc(0.05*100vh) 10px calc(0.1*100vh);
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        font-size: 24px;
-        /* padding-top: calc(0.15*100vh);
-        padding-bottom: calc(0.25*100vh); */
-        padding: calc(0.15*100vh) 5px calc(0.2*100vh);
         position: absolute;
         top: 91px;
         right: 0;
         bottom: 0;
         transform: translateX(100%);
-        background-color: rgba(245, 236, 236, 0.9);
-        width: 40%;
+        background-color: rgba(49, 48, 48, 0.9);
+        width: 45%;
         height: calc(100vh - 91px);
         transition: transform 0.5s;
     }
 
-    .site-nav__link{
-        font-size: 24px;
+    /* .site-nav__item {
+        margin-bottom: calc(100vh*0.08);
+    } */
+
+    .site-nav__link {
+        color: rgb(240, 235, 235);
+        font-weight: 400;
     }
 
     .site-nav__btn:hover .site-nav__list {
@@ -424,7 +439,6 @@ body {
     .site-nav__list {
         font-size: 16px;
         top: 71px;
-        height: calc(100vh - 71px );
-
+        height: calc(100vh - 71px);
     }
 }
