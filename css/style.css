@@ -3,6 +3,12 @@ html {
     box-sizing: border-box;
 }
 
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -378,21 +384,24 @@ body {
 
 
     .site-nav__list {
-        padding: calc(0.15*100vh) 10px 0 10px;
+        padding: calc(0.05*100vh) 10px calc(0.1*100vh);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
         position: absolute;
         top: 91px;
         right: 0;
         bottom: 0;
         transform: translateX(100%);
         background-color: rgba(49, 48, 48, 0.9);
-        width: 35%;
+        width: 45%;
         height: calc(100vh - 91px);
         transition: transform 0.5s;
     }
 
-    .site-nav__item {
+    /* .site-nav__item {
         margin-bottom: calc(100vh*0.08);
-    }
+    } */
 
     .site-nav__link {
         color: rgb(240, 235, 235);
