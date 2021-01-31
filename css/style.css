@@ -9,6 +9,11 @@ html {
     box-sizing: inherit;
 }
 
+img{
+    max-width: 100%;
+    display: block;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -356,6 +361,32 @@ body {
     .modern__img {
         overflow: hidden;
     }
+
+    .introduction{
+        padding-top: 130px;
+    }
+
+    .modern{
+        padding-top: 100px;
+    }
+
+    .title{
+        margin-bottom: 70px;
+    }
+
+    .modern__text,
+.modern__image {
+    max-width: 450px;
+    width: 100%;
+}
+
+.modern__image:hover {
+    transform: scale(1.01);
+    -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+    box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+    cursor: pointer;
+}
+
 }
 
 /*--------max 992-------------*/
@@ -426,6 +457,17 @@ body {
         transform: translateX(0);
     }
 
+    .modern__metro,
+.modern__plane,
+.modern__monument {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 70px;
+    align-items: center;
+}
+
+
+
 }
 
 /*--------max 576-------------*/
@@ -441,4 +483,9 @@ body {
         top: 71px;
         height: calc(100vh - 71px);
     }
+
+    .introduction{
+        padding-top: 100px;
+    }
+
 }
