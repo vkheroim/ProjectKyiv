@@ -484,6 +484,14 @@ body {
             transform: translateX(-50%);
             top: 36px;
         }
+        .modern__text {
+            padding: 20px 0 70px;
+        }
+        .modern__text::before{
+            bottom: 4px;
+            top: auto;
+            
+        }
     }
     /*--------max 576-------------*/
     @media (max-width: 576px) {
