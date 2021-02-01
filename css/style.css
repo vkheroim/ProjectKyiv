@@ -378,106 +378,133 @@ body {
     .modern__img {
         height: 300px;
     }
-}
-
-/*--------max 768-------------*/
-
-@media (max-width: 768px) {
-    .header {
-        padding: 5px 0;
+    .modern__text, .modern__image {
+        max-width: 350px;
+        width: 100%;
     }
-    .header__list {
-        display: none;
-    }
-    .site-nav__btn {
-        display: block;
-        font-size: 0;
-        border: none;
-        background-color: transparent;
-        margin-right: 40px;
-    }
-    .site-nav__list {
-        padding: calc(0.05*100vh) 10px calc(0.1*100vh);
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        position: absolute;
-        top: 91px;
-        right: 0;
-        bottom: 0;
-        transform: translateX(100%);
-        background-color: rgba(49, 48, 48, 0.9);
-        width: 45%;
-        height: calc(100vh - 91px);
-        transition: transform 0.5s;
-    }
-    /* .site-nav__item {
-        margin-bottom: calc(100vh*0.08);
-    } */
-    .site-nav__link {
-        color: rgb(240, 235, 235);
-        font-weight: 400;
-    }
-    .site-nav__btn:hover .site-nav__list {
-        transform: translateX(0);
-    }
-    .modern__metro, .modern__plane, .modern__monument {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 70px;
-        align-items: center;
+    .modern__text {
+        padding-top: 60px;
         position: relative;
     }
-    .modern__plane {
-        flex-direction: column-reverse;
-    }
-    .modern__metro::after, .modern__plane::after, .modern__monument::after{
+    .modern__text::before {
         content: "";
+        display: block;
         position: absolute;
-        display: block;
-        width: 50%;
-        height: 2px;
-        background-color: rgba(44, 37, 37, 0.842);
-        bottom: -10px;
-    }
-    .title {
-        padding-bottom: 90px;
-        margin-bottom: 0;
-        position: relative;
-    }
-    .title::before {
-        content: "";
-        display: block;
         width: 50px;
         height: 50px;
-        background-image: url(../images/buildings.svg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: absolute;
+        top: 3px;
         left: 50%;
         transform: translateX(-50%);
-        top: 36px;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
-}
-
-/*--------max 576-------------*/
-
-@media (max-width: 576px) {
-    .logo {
-        width: 60px;
-        height: 60px;
-        margin-right: 25px;
+    .modern__metro .modern__text::before {
+        background-image: url(../images/train.svg);
     }
-    .site-nav__list {
-        font-size: 16px;
-        top: 71px;
-        height: calc(100vh - 71px);
+    .modern__plane .modern__text::before {
+        background-image: url(../images/airplane.svg);
     }
-    .introduction {
-        padding-top: 100px;
+    .modern__monument .modern__text::before {
+        background-image: url(../images/washington-monument.svg);
     }
-
-    .title{
-        font-size: 24px;
+    /*--------max 768-------------*/
+    @media (max-width: 768px) {
+        .header {
+            padding: 5px 0;
+        }
+        .header__list {
+            display: none;
+        }
+        .site-nav__btn {
+            display: block;
+            font-size: 0;
+            border: none;
+            background-color: transparent;
+            margin-right: 40px;
+        }
+        .site-nav__list {
+            padding: calc(0.05*100vh) 10px calc(0.1*100vh);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            position: absolute;
+            top: 91px;
+            right: 0;
+            bottom: 0;
+            transform: translateX(100%);
+            background-color: rgba(49, 48, 48, 0.9);
+            width: 45%;
+            height: calc(100vh - 91px);
+            transition: transform 0.5s;
+        }
+        /* .site-nav__item {
+        margin-bottom: calc(100vh*0.08);
+    } */
+        .site-nav__link {
+            color: rgb(240, 235, 235);
+            font-weight: 400;
+        }
+        .site-nav__btn:hover .site-nav__list {
+            transform: translateX(0);
+        }
+        .modern__metro, .modern__plane, .modern__monument {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 70px;
+            align-items: center;
+            position: relative;
+        }
+        .modern__plane {
+            flex-direction: column-reverse;
+        }
+        .modern__metro::after, .modern__plane::after, .modern__monument::after {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 50%;
+            height: 2px;
+            background-color: rgba(44, 37, 37, 0.842);
+            bottom: -10px;
+        }
+        .title {
+            padding-bottom: 90px;
+            margin-bottom: 0;
+            position: relative;
+        }
+        .title::before {
+            content: "";
+            display: block;
+            width: 50px;
+            height: 50px;
+            background-image: url(../images/buildings.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 36px;
+        }
+    }
+    /*--------max 576-------------*/
+    @media (max-width: 576px) {
+        .logo {
+            width: 60px;
+            height: 60px;
+            margin-right: 25px;
+        }
+        .site-nav__list {
+            font-size: 16px;
+            top: 71px;
+            height: calc(100vh - 71px);
+        }
+        .introduction {
+            padding-top: 100px;
+        }
+        .title {
+            font-size: 24px;
+        }
+        .modern {
+            padding-top: 60px;
+        }
     }
 }
