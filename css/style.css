@@ -242,6 +242,47 @@ body {
     box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 9px -6px 14px 5px rgba(0, 0, 0, 0);
 }
 
+form {
+    display: flex;
+    justify-content: space-between;
+    max-width: 50%;
+    margin: 0 auto;
+    padding: 20px 50px;
+}
+
+input, textarea {
+    display: block;
+    width: 100%;
+    padding: 5px;
+}
+
+input:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+textarea {
+    resize: none;
+    min-height: 90px;
+}
+
+.comment__section{
+    margin-bottom: 50px;
+}
+
+.wrapper-input, .wrapper-submit {
+    width: 45%;
+}
+
+.wrapper-submit {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+button {
+    max-width: 70px;
+}
+
 .footer {
     /* background: radial-gradient(circle, rgba(204, 204, 204, 1) 52%, rgba(5, 0, 0, 0.7458333675266982) 100%); */
     background: linear-gradient(180deg, rgba(204, 204, 204, 1) 64%, rgba(5, 0, 0, 0.45) 100%);
@@ -487,10 +528,9 @@ body {
         .modern__text {
             padding: 20px 0 70px;
         }
-        .modern__text::before{
+        .modern__text::before {
             bottom: 4px;
             top: auto;
-            
         }
     }
     /*--------max 576-------------*/
