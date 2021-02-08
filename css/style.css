@@ -27,7 +27,7 @@ body {
 
 .header {
     background: linear-gradient(0deg, rgba(255, 243, 0, 1) 10%, rgba(0, 203, 255, 1) 90%);
-    padding: 12px 0;
+    padding: 8px 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.5);
     position: fixed;
     z-index: 10;
@@ -48,8 +48,8 @@ body {
 }
 
 .logo {
-    width: 100px;
-    height: 100px;
+    width: 74px;
+    height:  74px;
     display: block;
     overflow: hidden;
 }
@@ -64,14 +64,14 @@ body {
     display: flex;
 }
 
-.header__item {
-    margin-right: 100px;
+.header__item:not(:last-child) {
+    margin-right: 80px;
 }
 
 .header__link, .site-nav__link {
     color: rgb(0, 0, 0);
     text-decoration: none;
-    font-size: 26px;
+    font-size: 22px;
     font-weight: 600;
     font-family: 'Langar';
 }
@@ -80,9 +80,9 @@ body {
     display: none;
 }
 
-.modern {
+.modern, .history, .ancient {
     /* background: rgba(0, 255, 192, 0.2); */
-    padding-top: 190px;
+    padding-top: 140px;
 }
 
 .modern__img {
@@ -160,11 +160,6 @@ body {
     margin: 0;
 }
 
-.history {
-    /* background-color: rgba(255, 24, 204, 0.2); */
-    padding-top: 190px;
-}
-
 .content {
     padding: 25px 0;
 }
@@ -201,12 +196,6 @@ body {
     text-align: center;
 }
 
-.ancient {
-    /* background-color: rgba(200, 200, 255, 0.7); */
-    padding-top: 190px;
-    padding-bottom: 75px;
-}
-
 .ancient__legend {
     margin-bottom: 70px;
 }
@@ -219,9 +208,6 @@ body {
     margin-bottom: 70px;
 }
 
-.ancient__attack {
-    margin-bottom: 70px;
-}
 
 .ancient__text {
     margin-bottom: 36px;
@@ -242,32 +228,55 @@ body {
     box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 9px -6px 14px 5px rgba(0, 0, 0, 0);
 }
 
-form {
-    display: flex;
-    justify-content: space-between;
-    max-width: 50%;
-    margin: 0 auto;
-    padding: 20px 50px;
+.form--title {
+    margin-bottom: 40px;
 }
 
-input, textarea {
+.contact-form {
+    margin-bottom: 50px;
+    padding-top: 110px;
+}
+
+.contact {
+    display: flex;
+    justify-content: space-between;
+    max-width: 70%;
+    margin: 0 auto;
+    padding: 20px 50px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: rgb(149, 180, 226);
+    -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+    box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+}
+
+.contact__input, .contact__message {
     display: block;
     width: 100%;
     padding: 5px;
+    border: 2px solid #ccc;
+    border-radius: 3px;
+    transition: all 0.3s;
 }
 
-input:not(:last-child) {
-    margin-bottom: 20px;
+.contact__input:hover, .contact__message:hover {
+    background-color: #e2e2e2;
+    border: 2px solid rgb(86, 241, 216);
+    cursor: pointer;
 }
 
-textarea {
+.contact__input:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.contact__message {
     resize: none;
-    min-height: 90px;
+    min-height: 100px;
 }
 
-.comment__section{
+/* .contact{
     margin-bottom: 50px;
-}
+} */
 
 .wrapper-input, .wrapper-submit {
     width: 45%;
@@ -279,8 +288,13 @@ textarea {
     justify-content: space-between;
 }
 
-button {
-    max-width: 70px;
+.btn {
+    max-width: 90px;
+    padding: 5px 0;
+    background-color: rgb(147, 255, 214);
+    cursor: pointer;
+    border-radius: 3px;
+    border: none;
 }
 
 .footer {
@@ -403,6 +417,10 @@ button {
         box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
         cursor: pointer;
     }
+
+    .footer{
+        padding: 20px 0;
+    }
 }
 
 /*--------max 992-------------*/
@@ -447,6 +465,10 @@ button {
     }
     .modern__monument .modern__text::before {
         background-image: url(../images/washington-monument.svg);
+    }
+
+    .footer{
+        padding: 10px 0;
     }
     /*--------max 768-------------*/
     @media (max-width: 768px) {
@@ -553,6 +575,26 @@ button {
         }
         .modern {
             padding-top: 60px;
+        }
+
+        .footer{
+            padding: 5px 0;
+        }
+
+        .footer__inner{
+            flex-direction: column; 
+        }
+
+        .footer__text{
+            margin-bottom: 5px;
+        }
+
+        .footer__address p{
+            margin-bottom: 0;
+        }
+
+        .footer__address{
+            margin-bottom: 5px;
         }
     }
 }
