@@ -49,7 +49,7 @@ body {
 
 .logo {
     width: 74px;
-    height:  74px;
+    height: 74px;
     display: block;
     overflow: hidden;
 }
@@ -168,6 +168,7 @@ body {
     display: flex;
     justify-content: space-around;
     margin-bottom: 70px;
+    align-items: center;
 }
 
 .history__gates {
@@ -177,7 +178,12 @@ body {
 .history__image {
     transition: linear 0.3s;
     border-radius: 5px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
+
+
 
 .history__image:hover {
     transform: scale(1.05);
@@ -207,7 +213,6 @@ body {
 .ancient__volodymyr {
     margin-bottom: 70px;
 }
-
 
 .ancient__text {
     margin-bottom: 36px;
@@ -321,6 +326,7 @@ body {
     max-width: 160px;
     font-family: Times New Roman;
     font-size: 18px;
+    width: 100%;
 }
 
 .footer__address a {
@@ -392,7 +398,7 @@ body {
         height: 80px;
         margin-left: 40px;
     }
-    .header__item {
+    .header__item:not(:last-child) {
         margin-right: 60px;
     }
     .header__link {
@@ -405,7 +411,7 @@ body {
         padding-top: 130px;
     }
     .modern {
-        padding-top: 100px;
+        padding-top: 116px;
     }
     .modern__text, .modern__image {
         max-width: 450px;
@@ -417,9 +423,14 @@ body {
         box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
         cursor: pointer;
     }
-
-    .footer{
+    .title {
+        margin-bottom: 80px;
+    }
+    .footer {
         padding: 20px 0;
+    }
+    .footer__inner {
+        justify-content: space-around;
     }
 }
 
@@ -430,9 +441,11 @@ body {
         align-items: center;
     }
     .header__item {
-        margin-right: 45px;
         max-width: 100px;
         text-align: center;
+    }
+    .header__item:not(:last-child) {
+        margin-right: 30px;
     }
     .modern__img {
         height: 300px;
@@ -466,8 +479,23 @@ body {
     .modern__monument .modern__text::before {
         background-image: url(../images/washington-monument.svg);
     }
-
-    .footer{
+    .content {
+        padding: 0 0;
+    }
+    .history__image, .history__text {
+        max-width: calc(100vw*0.45);
+    }
+    .history__image {
+        object-fit: contain;
+        height: auto;
+    }
+    .history__text {
+        padding: 0;
+    }
+    .history__title {
+        margin-bottom: 20px;
+    }
+    .footer {
         padding: 10px 0;
     }
     /*--------max 768-------------*/
@@ -554,6 +582,16 @@ body {
             bottom: 4px;
             top: auto;
         }
+        .history__image {
+            max-width: calc(100vw*0.6);
+            margin-bottom: 30px;
+        }
+        .history__text {
+            max-width: calc(100vw*0.75);
+        }
+        .history__lavra, .history__sophia, .history__gates {
+            flex-direction: column;
+        }
     }
     /*--------max 576-------------*/
     @media (max-width: 576px) {
@@ -574,27 +612,25 @@ body {
             font-size: 24px;
         }
         .modern {
-            padding-top: 60px;
+            padding-top: 80px;
         }
-
-        .footer{
+        .footer {
             padding: 5px 0;
         }
-
-        .footer__inner{
-            flex-direction: column; 
+        .footer__inner {
+            flex-direction: column;
         }
-
-        .footer__text{
+        .footer__text {
             margin-bottom: 5px;
         }
-
-        .footer__address p{
+        .footer__address p {
             margin-bottom: 0;
         }
-
-        .footer__address{
-            margin-bottom: 5px;
+        .footer__address {
+            margin-bottom: 7px;
+            font-size: 16px;
+            max-width: 250px;
+            text-align: center;
         }
     }
 }
