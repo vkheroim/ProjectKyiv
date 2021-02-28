@@ -335,7 +335,8 @@ body {
 .contact {
     display: flex;
     justify-content: space-between;
-    max-width: 70%;
+    max-width: 80%;
+    min-height: 240px;
     margin: 0 auto;
     padding: 20px 50px;
     border: 2px solid #ccc;
@@ -365,6 +366,7 @@ body {
 }
 
 .contact__message {
+    margin-bottom: 24px;
     resize: none;
     min-height: 100px;
 }
@@ -380,7 +382,6 @@ body {
 .wrapper-submit {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
 .btn {
@@ -494,9 +495,9 @@ body {
     .header__link {
         font-size: 22px;
     }
-     .modern__img {
+    .modern__img {
         overflow: hidden;
-    } 
+    }
     .introduction {
         padding-top: 130px;
     }
@@ -540,9 +541,9 @@ body {
     .modern__img {
         height: 300px;
     }
-     .slider{
+    .slider {
         max-height: 300px;
-    } 
+    }
     .modern__text, .modern__image {
         max-width: 350px;
         width: 100%;
@@ -658,15 +659,23 @@ body {
         .title::before {
             content: "";
             display: block;
-            width: 50px;
-            height: 50px;
-            background-image: url(../images/buildings.svg);
+            width: 45px;
+            height: 45px;
             background-repeat: no-repeat;
             background-size: cover;
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
-            top: 36px;
+            top: 44px;
+        }
+        .title--modern::before{
+            background-image: url(../images/buildings.svg);
+        }
+        .form--title::before{
+            background-image: url(../images/contact-form.svg);
+        }
+        .history--title::before{
+            background-image: url(../images/history.svg);
         }
         .modern__text {
             padding: 20px 0 70px;
@@ -684,6 +693,19 @@ body {
         }
         .history__lavra, .history__sophia, .history__gates {
             flex-direction: column;
+        }
+        .contact {
+            flex-direction: column;
+            align-items: center;
+        }
+        .contact__message {
+            margin-top: 30px;
+        }
+        .wrapper-input, .wrapper-submit {
+            width: 90%;
+        }
+        .btn {
+            max-width: 120px;
         }
     }
     /*--------max 576-------------*/
@@ -707,8 +729,11 @@ body {
         .modern {
             padding-top: 80px;
         }
-        .slider-nav-item{
+        .slider-nav-item {
             width: 50px;
+        }
+        .wrapper-input, .wrapper-submit {
+            width: 100%;
         }
         .footer {
             padding: 5px 0;
