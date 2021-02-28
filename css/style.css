@@ -144,6 +144,7 @@ body {
     background-color: cadetblue;
     opacity: 0.6;
     transition: opacity 0.3s;
+    border-radius: 3px;
 }
 
 .slider-nav-item:hover {
