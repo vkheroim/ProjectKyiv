@@ -780,12 +780,12 @@ body {
             margin-bottom: 70px;
         }
         .home {
-            bottom: 100px;
+            bottom: 10px;
             left: 10px;
         }
         .page-down {
             right: 10px;
-            bottom: 100px;
+            bottom: 10px;
         }
     }
 }
