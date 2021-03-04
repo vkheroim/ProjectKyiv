@@ -292,20 +292,31 @@ body {
     text-align: center;
 }
 
+.ancient__volodymyr, .ancient__fortress, .ancient__attack {
+    padding: 45px 0 25px 0;
+    position: relative;
+}
+
 .ancient__legend {
-    margin-bottom: 70px;
+    padding-bottom: 25px;
+    position: relative;
 }
 
-.ancient__fortress {
-    margin-bottom: 70px;
-}
-
-.ancient__volodymyr {
-    margin-bottom: 70px;
+.ancient__volodymyr::after, .ancient__legend::after, .ancient__fortress::after, .ancient__attack::after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    background-color: rgb(56, 9, 9);
+    display: block;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
 }
 
 .ancient__text {
     margin-bottom: 36px;
+    padding: 0 20px;
 }
 
 .ancient__image {
@@ -478,7 +489,7 @@ body {
     bottom: 75px;
 }
 
-/*--------max 1220-------------*/
+/*--------max 1200-------------*/
 
 @media (max-width: 1200px) {
     .header {
@@ -522,6 +533,12 @@ body {
     }
     .footer__inner {
         justify-content: space-around;
+    }
+    .home {
+        bottom: 160px;
+    }
+    .page-down {
+        bottom: 105px;
     }
 }
 
@@ -668,13 +685,13 @@ body {
             transform: translateX(-50%);
             top: 44px;
         }
-        .title--modern::before{
+        .title--modern::before {
             background-image: url(../images/buildings.svg);
         }
-        .form--title::before{
+        .form--title::before {
             background-image: url(../images/contact-form.svg);
         }
-        .history--title::before{
+        .history--title::before {
             background-image: url(../images/history.svg);
         }
         .modern__text {
@@ -707,6 +724,9 @@ body {
         .btn {
             max-width: 120px;
         }
+        .home, .page-down {
+            right: 18px;
+        }
     }
     /*--------max 576-------------*/
     @media (max-width: 576px) {
@@ -728,6 +748,9 @@ body {
         }
         .modern {
             padding-top: 80px;
+        }
+        .ancient__image {
+            width: 94%;
         }
         .slider-nav-item {
             width: 50px;
@@ -752,6 +775,17 @@ body {
             font-size: 16px;
             max-width: 250px;
             text-align: center;
+        }
+        .contact-form {
+            margin-bottom: 70px;
+        }
+        .home {
+            bottom: 100px;
+            left: 10px;
+        }
+        .page-down {
+            right: 10px;
+            bottom: 100px;
         }
     }
 }
